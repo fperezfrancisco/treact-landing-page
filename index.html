@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Treact FES Final Project</title>
+  </head>
+  <body>
+    <header class="mainHeader flex row">
+      <nav class="mainNav flex">
+        <a href="#" class="navLink homeLogo flex">
+          <img
+            src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg"
+            alt="treact logo"
+            class="logoImg"
+          />
+          <span class="logoText">Treact</span>
+        </a>
+        <ul class="navList noList flex">
+          <li class="navLi flex"><a href="#about" class="navLink">About</a></li>
+          <li class="navLi flex"><a href="#blog" class="navLink">Blog</a></li>
+          <li class="navLi flex">
+            <a href="#pricing" class="navLink">Pricing</a>
+          </li>
+          <li class="navLi flex">
+            <a href="#contact" class="navLink">Contact Us</a>
+          </li>
+          <li class="navLi flex logInLi">
+            <a href="#logIn" class="navLink">Login</a>
+          </li>
+          <li class="navLi flex signUpLi">
+            <button class="signUpBtn flex">Sign Up</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mainContainer">
+      <section class="pageSection row flex heroSection">
+        <div class="heroCopy flexColumn">
+          <h1 class="heroTitle">
+            Beautiful React Templates <span class="specialText">for you.</span>
+          </h1>
+          <p class="sectionPara subheading">
+            Our templates are easy to setup, understand and customize. Fully
+            modular components with a variety of pages and components.
+          </p>
+          <div class="emailContainer flex">
+            <input
+              type="email"
+              class="emailInput flex"
+              placeholder="Your E-mail Address"
+            />
+            <button class="emailBtn flex">Get Started</button>
+          </div>
+          <div class="customersContainer flexColumn">
+            <p class="sectionPara customersPara">Our Trusted Customers</p>
+            <img
+              src="https://treact.owaiskhan.me/static/media/customers-logo-strip.680ac7c2e8ae28161d2c.png"
+              alt="Our customers"
+              class="customersImg"
+            />
+          </div>
+        </div>
+        <div class="heroArt flex">
+          <img
+            src="https://treact.owaiskhan.me/static/media/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
+            alt="Developer sitting at her desk in winter"
+            class="imageContainer heroImg"
+          />
+        </div>
+      </section>
+      <section class="pageSection flex featuresSection">
+        <div class="row innerFeaturesContainer flexColumn">
+          <h3 class="subtitle specialText">Features</h3>
+          <h2 class="sectionTitle">
+            We have Amazing <span class="specialText">Services.</span>
+          </h2>
+          <p class="sectionPara titlePara">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="subfeatureContainer flex">
+            <div class="serviceBox flex">
+              <div class="iconBox flex">
+                <img
+                  src="https://treact.owaiskhan.me/static/media/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
+                  alt="shield icon"
+                  class="iconImg"
+                />
+              </div>
+              <div class="serviceDescription flexColumn">
+                <p class="serviceTitle">Secure</p>
+                <p class="servicePara">
+                  We strictly only deal with vendors that provide top notch
+                  security.
+                </p>
+              </div>
+            </div>
+            <div class="serviceBox flex">
+              <div class="iconBox flex">
+                <img
+                  src="https://treact.owaiskhan.me/static/media/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
+                  alt="shield icon"
+                  class="iconImg"
+                />
+              </div>
+              <div class="serviceDescription flexColumn">
+                <p class="serviceTitle">24/7 Support</p>
+                <p class="servicePara">
+                  Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                  quis nostrud.
+                </p>
+              </div>
+            </div>
+            <div class="serviceBox flex">
+              <div class="iconBox flex">
+                <img
+                  src="https://treact.owaiskhan.me/static/media/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
+                  alt="shield icon"
+                  class="iconImg"
+                />
+              </div>
+              <div class="serviceDescription flexColumn">
+                <p class="serviceTitle">Customizable</p>
+                <p class="servicePara">
+                  Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                  quis nostrud.
+                </p>
+              </div>
+            </div>
+            <div class="serviceBox flex">
+              <div class="iconBox flex">
+                <img
+                  src="https://treact.owaiskhan.me/static/media/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
+                  alt="shield icon"
+                  class="iconImg"
+                />
+              </div>
+              <div class="serviceDescription flexColumn">
+                <p class="serviceTitle">Reliable</p>
+                <p class="servicePara">
+                  Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                  quis nostrud.
+                </p>
+              </div>
+            </div>
+            <div class="serviceBox flex">
+              <div class="iconBox flex">
+                <img
+                  src="https://treact.owaiskhan.me/static/media/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
+                  alt="shield icon"
+                  class="iconImg"
+                />
+              </div>
+              <div class="serviceDescription flexColumn">
+                <p class="serviceTitle">Fast</p>
+                <p class="servicePara">
+                  Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                  quis nostrud.
+                </p>
+              </div>
+            </div>
+            <div class="serviceBox flex">
+              <div class="iconBox flex">
+                <img
+                  src="https://treact.owaiskhan.me/static/media/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
+                  alt="shield icon"
+                  class="iconImg"
+                />
+              </div>
+              <div class="serviceDescription flexColumn">
+                <p class="serviceTitle">Easy</p>
+                <p class="servicePara">
+                  Lorem ipsum donor amet siti ceali ut enim ad minim veniam,
+                  quis nostrud.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pageSection flex qualityWorkSection">
+        <div class="row innerContainerWork flex">
+          <div class="sectionCopyContainer flexColumn qualityWorkCopy">
+            <h3 class="subtitle specialText">Quality Work</h3>
+            <h2 class="sectionTitle">
+              Designed & Developed by
+              <span class="specialText">Professionals.</span>
+            </h2>
+            <p class="sectionPara workPara">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <button class="learnMoreBtn">Learn More</button>
+          </div>
+          <div class="artContainer qualityArtContainer flex">
+            <img
+              src="https://treact.owaiskhan.me/static/media/hero-screenshot-1.40a097b525c2f8c9808e.png"
+              alt="quality work landing page artwork"
+              class="qualityWorkImg"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="pageSection flex easySection">
+        <div class="innerEasyContainer flex row">
+          <div class="innerArtContainerEasy flex">
+            <img
+              src="https://treact.owaiskhan.me/static/media/hero-screenshot-2.241aac1fbc66db29d873.png"
+              alt="laptop screenshot"
+              class="easyImg"
+            />
+          </div>
+          <div class="sectionCopyContainer easyCopyContainer flexColumn">
+            <h3 class="subtitle specialText">Steps</h3>
+            <h2 class="sectionTitle">
+              Easy to <span class="specialText">Get Started.</span>
+            </h2>
+            <ol class="stepsList flexColumn">
+              <li class="stepLi flex">
+                <span class="number">01</span>
+                <div class="stepDescription">
+                  <p class="stepTitle">Register</p>
+                  <p class="stepText">
+                    Create an account with us using Google or Facebook.
+                  </p>
+                </div>
+              </li>
+              <li class="stepLi flex">
+                <span class="number">02</span>
+                <div class="stepDescription">
+                  <p class="stepTitle">Download</p>
+                  <p class="stepText">
+                    Browse and Download the template that you like from the
+                    marketplace.
+                  </p>
+                </div>
+              </li>
+              <li class="stepLi flex">
+                <span class="number">03</span>
+                <div class="stepDescription">
+                  <p class="stepTitle">Run</p>
+                  <p class="stepText">
+                    Follow the instructions to setup and customize the template
+                    to your needs.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="pageSection flex valuesSection">
+        <div class="innerValueContainer flex row">
+          <div class="sectionCopyContainer valueCopyContainer flexColumn">
+            <h3 class="subtitle specialText">Values</h3>
+            <h2 class="sectionTitle">
+              We Always Abide by Our
+              <span class="specialText">Principles.</span>
+            </h2>
+            <p class="sectionPara valuesPara">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="valueBox row flex">
+              <div class="valueSmallBox flexColumn">
+                <div class="valueBoxTitle flex">
+                  <span class="valueIconBox flex green">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-dollar-sign"
+                    >
+                      <line x1="12" y1="1" x2="12" y2="23"></line>
+                      <path
+                        d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                      ></path>
+                    </svg>
+                  </span>
+                  <h3 class="valueTitle">Affordable</h3>
+                </div>
+                <p class="sectionPara valueSmallPara">
+                  We promise to offer you the best rate we can - at par with the
+                  industry standard.
+                </p>
+              </div>
+              <div class="valueSmallBox flexColumn">
+                <div class="valueBoxTitle flex">
+                  <span class="valueIconBox flex red">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-briefcase"
+                    >
+                      <rect
+                        x="2"
+                        y="7"
+                        width="20"
+                        height="14"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <path
+                        d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"
+                      ></path>
+                    </svg>
+                  </span>
+                  <h3 class="valueTitle">Professionalism</h3>
+                </div>
+                <p class="sectionPara valueSmallPara">
+                  We promise to offer you the best rate we can - at par with the
+                  industry standard.
+                </p>
+              </div>
+            </div>
+            <button class="learnMoreBtn">Learn More</button>
+          </div>
+          <div class="sectionArtContainer flex valueArtContainer">
+            <img
+              src="https://treact.owaiskhan.me/static/media/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
+              alt="person low fidelity brainstorming"
+              class="valuesImg"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="pageSection flex pricingSection">
+        <div class="innerPricingContainer flexColumn row">
+          <h3 class="subtitle specialText">Pricing</h3>
+          <h2 class="sectionTitle">
+            Reasonable & Flexible <span class="specialText">Plans.</span>
+          </h2>
+          <p class="sectionPara pricingPara">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="pricingBlock flex row">
+            <div class="pricingBox flexColumn personalPriceBox">
+              <div class="pricingColorStrip greenStrip"></div>
+              <div class="pricingHeader flexColumn">
+                <h3 class="pricingTitle">Personal</h3>
+                <p class="priceTag">$17.99</p>
+                <p class="billingType">Monthly</p>
+              </div>
+              <div class="pricingDescription flexColumn">
+                <h3 class="forWho">For Individuals</h3>
+                <ul class="descriptionList flexColumn">
+                  <li class="descriptionLi flex">30 Templates</li>
+                  <li class="descriptionLi flex">7 Landing Pages</li>
+                  <li class="descriptionLi flex">12 Internal Pages</li>
+                  <li class="descriptionLi flex">Basic Assistance</li>
+                </ul>
+              </div>
+              <div class="priceCta flex">
+                <button class="ctaBtn personalBtn">Buy Now</button>
+              </div>
+            </div>
+            <div class="pricingBox flexColumn businessPriceBox">
+              <div class="pricingHeader flexColumn">
+                <h3 class="pricingTitle">Business</h3>
+                <p class="priceTag">$37.99</p>
+                <p class="billingType">Monthly</p>
+              </div>
+              <div class="pricingDescription flexColumn">
+                <h3 class="forWho">For Small Business</h3>
+                <ul class="descriptionList flexColumn">
+                  <li class="descriptionLi flex">60 Templates</li>
+                  <li class="descriptionLi flex">15 Landing Pages</li>
+                  <li class="descriptionLi flex">22 Internal Pages</li>
+                  <li class="descriptionLi flex">Priority Assistance</li>
+                </ul>
+              </div>
+              <div class="priceCta flex">
+                <button class="ctaBtn businessBtn">Buy Now</button>
+              </div>
+            </div>
+            <div class="pricingBox flexColumn enterprisePriceBox">
+              <div class="pricingColorStrip redStrip"></div>
+              <div class="pricingHeader flexColumn">
+                <h3 class="pricingTitle">Enterprise</h3>
+                <p class="priceTag">$17.99</p>
+                <p class="billingType">Monthly</p>
+              </div>
+              <div class="pricingDescription flexColumn">
+                <h3 class="forWho">For Large Companies</h3>
+                <ul class="descriptionList flexColumn">
+                  <li class="descriptionLi flex">90 Templates</li>
+                  <li class="descriptionLi flex">27 Landing Pages</li>
+                  <li class="descriptionLi flex">37 Internal Pages</li>
+                  <li class="descriptionLi flex">Personal Assistance</li>
+                </ul>
+              </div>
+              <div class="priceCta flex">
+                <button class="ctaBtn enterpriseBtn">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

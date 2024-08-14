@@ -1,0 +1,601 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: var(--black-text);
+  padding: 0rem 2rem;
+}
+
+:root {
+  --title-color: #243e63;
+  --accent-color: #6415ff;
+  --black-text: #1a202c;
+  --light-grey: #7c8ba1;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.noList {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.row {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* main navigation */
+
+.mainNav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+  width: 100%;
+}
+
+.homeLogo {
+  margin-right: 24px;
+  padding-bottom: 4px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  width: 2.5rem;
+  margin-right: 0.75rem;
+}
+
+.navList {
+  align-items: center;
+}
+
+.navLi {
+  margin: 0px 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.logInLi {
+  margin-left: 48px;
+  margin-right: 0.5rem;
+}
+
+.signUpBtn {
+  padding: 0.75rem 2rem;
+  background-color: var(--accent-color);
+  color: rgba(247, 250, 252, 1);
+  border: none;
+  box-shadow: none;
+  border-radius: 1.25rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* main section of page */
+
+.mainContainer {
+  width: 100%;
+}
+
+.pageSection {
+  padding: 6rem 0rem;
+}
+
+.heroCopy {
+  text-align: left;
+  width: 40%;
+  max-width: none;
+}
+
+.heroTitle {
+  font-size: 3.25rem;
+  color: var(--black-text);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.specialText {
+  color: var(--accent-color);
+}
+
+.heroArt {
+  width: 60%;
+}
+
+.heroImg {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.sectionPara {
+  font-size: 1.125rem;
+  margin: 2rem 0rem;
+  line-height: 1.5;
+}
+
+.emailContainer {
+  width: 100%;
+  position: relative;
+  max-width: 28rem;
+}
+
+.emailInput {
+  width: 100%;
+  border: 2px solid rgb(226, 232, 240);
+  color: var(--light-grey);
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
+input::placeholder {
+  color: rgb(184, 190, 197);
+  opacity: 1;
+}
+
+.emailBtn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  margin: auto;
+  border: none;
+  box-shadow: none;
+  border-radius: 2rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.customersContainer {
+  margin-top: 5rem;
+  text-transform: uppercase;
+  color: var(--light-grey);
+}
+
+.customersPara {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0rem;
+}
+
+.customersImg {
+  padding-right: 6rem;
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+
+/* Features section */
+
+.featuresSection {
+  padding: 5rem 0;
+}
+
+.innerFeaturesContainer {
+  text-align: center;
+  align-items: center;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05rem;
+}
+
+.sectionTitle {
+  font-weight: 900;
+  font-size: 2.75rem;
+}
+
+.titlePara {
+  font-weight: 400;
+  color: var(--light-grey);
+  line-height: 1.5;
+  max-width: 36rem;
+}
+
+.subfeatureContainer {
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceBox {
+  margin: 0rem 1rem;
+  padding: 2rem 0.5rem;
+
+  width: 100%;
+  max-width: calc(92% / 3);
+}
+
+.iconBox {
+  border: 1px solid var(--light-grey);
+  text-align: center;
+  padding: 1.25rem;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  width: 66px;
+  height: 66px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceDescription {
+  margin: 0.5rem 0rem 0rem 1rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.serviceTitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  color: var(--title-color);
+}
+
+.servicePara {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2;
+  color: rgb(124, 139, 161, 1);
+}
+
+/* quality work section */
+
+.innerContainerWork {
+  width: 100%;
+  padding: 6rem 0rem;
+}
+
+.innerContainerWork > div {
+  width: 50%;
+}
+
+.qualityWorkCopy {
+  padding: 1.5;
+}
+
+.learnMoreBtn {
+  padding: 1rem 2.5rem;
+  background-color: var(--accent-color);
+  color: #ffff;
+  box-shadow: none;
+  border: none;
+  border-radius: 2rem;
+  width: fit-content;
+  letter-spacing: 0.5px;
+}
+
+/* easy section */
+
+.innerEasyContainer > div {
+  width: 50%;
+}
+
+.innerArtContainerEasy {
+  flex-shrink: 0;
+}
+
+.innerArtContainerEasy img {
+  height: fit-content;
+}
+
+.easyCopyContainer {
+  margin-left: 4rem;
+  padding: 2rem 0rem;
+}
+
+.stepsList {
+  margin-top: 3rem;
+  row-gap: 2rem;
+}
+
+.stepLi {
+  column-gap: 1.25rem;
+}
+
+.number {
+  font-size: 2rem;
+  color: var(--light-grey);
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.stepTitle {
+  font-size: 1.125rem;
+  color: var(--title-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.stepText {
+  max-width: 20rem;
+  line-height: 2;
+  font-size: 0.875rem;
+  color: var(--light-grey);
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+/* values section */
+
+.innerValueContainer > div {
+  width: 50%;
+}
+
+.valueCopyContainer {
+  margin-right: 4rem;
+  padding: 2rem 0rem;
+}
+
+.valueBoxTitle {
+  align-items: center;
+}
+
+.valueBox {
+  margin: 0rem 0rem 1rem;
+  column-gap: 1.5rem;
+}
+
+.valueIconBox {
+  padding: 0.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.green {
+  background-color: #9ae6b4;
+}
+
+.red {
+  background-color: #feb2b2;
+}
+
+.valueSmallPara {
+  color: var(--light-grey);
+  opacity: 0.85;
+}
+
+/* pricing plans */
+
+.innerPricingContainer {
+  text-align: center;
+  align-items: center;
+}
+
+.pricingPara {
+  margin-bottom: 4rem;
+  max-width: 600px;
+  color: var(--light-grey);
+  opacity: 0.75;
+}
+
+.pricingBlock {
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+
+.pricingBox {
+  position: relative;
+  width: calc(88% / 3);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 8px rgb(171, 171, 171);
+  margin: 0rem 0.5rem;
+}
+
+.pricingHeader {
+  padding-bottom: 1rem;
+  /* border-bottom: 2px solid var(--light-grey); */
+  text-align: center;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 2rem;
+}
+
+.pricingTitle {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--black-text);
+  font-size: 1.25rem;
+  margin: 1rem 0rem;
+}
+
+.priceTag {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1ren 0rem;
+}
+
+.billingType {
+  color: var(--light-grey);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  margin: 1rem 0rem;
+  text-transform: uppercase;
+}
+
+.pricingDescription {
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+  row-gap: 2rem;
+  border-bottom: 2px solid var(--light-grey);
+}
+
+.descriptionList {
+  text-align: center;
+  align-items: center;
+  row-gap: 1rem;
+  color: var(--light-grey);
+}
+
+.descriptionLi {
+  opacity: 0.75;
+}
+
+.priceCta {
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaBtn {
+  padding: 1rem 3.25rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  box-shadow: none;
+  text-transform: uppercase;
+}
+
+.businessPriceBox {
+  background-color: #6415ff;
+  color: #ffff;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background-image: linear-gradient(
+    135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%
+  );
+}
+
+.businessPriceBox .descriptionLi,
+.businessPriceBox .billingType,
+.businessPriceBox .pricingTitle {
+  color: #ffff;
+  opacity: 1;
+}
+
+.businessPriceBox > .pricingHeader,
+.businessPriceBox > .pricingDescription {
+  border-bottom: 2px solid rgba(143, 160, 234, 0.856);
+}
+
+.businessBtn {
+  background-color: #ffff;
+  color: var(--accent-color);
+}
+
+.pricingColorStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 8px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  z-index: 10;
+}
+
+.greenStrip {
+  background-color: green;
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.redStrip {
+  background-color: red;
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
+}
+
+.personalBtn {
+  background-color: green;
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+  color: #ffff;
+}
+
+.enterpriseBtn {
+  background-color: red;
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
+  color: #fff;
+}
+
+.personalPriceBox .pricingHeader,
+.enterprisePriceBox .pricingHeader {
+  border-bottom: 2px solid var(--light-grey);
+}
