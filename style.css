@@ -599,3 +599,17 @@ input::placeholder {
 .enterprisePriceBox .pricingHeader {
   border-bottom: 2px solid var(--light-grey);
 }
+
+/* testimonials section */
+
+.innerTestimonialContainer > div {
+  width: 50%;
+}
+
+.testimonialArtContainer img {
+  width: 100%;
+}
+
+.testimonialCopyContainer {
+  margin-left: 4rem;
+}
