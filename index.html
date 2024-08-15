@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Treact FES Final Project</title>
   </head>
   <body>
@@ -443,7 +447,13 @@
             </p>
             <div class="testimonialBox flex row">
               <div class="testimonial flexColumn" id="adamTestimonial">
-                <div class="starsBox flex"></div>
+                <div class="starsBox flex">
+                  <i class="bx bxs-star star"></i>
+                  <i class="bx bxs-star star"></i>
+                  <i class="bx bxs-star star"></i>
+                  <i class="bx bxs-star star"></i>
+                  <i class="bx bxs-star star"></i>
+                </div>
                 <h3 class="testimonialTitle">
                   Love the Developer Experience and Design Principles !
                 </h3>
@@ -458,19 +468,87 @@
                 </p>
                 <div class="testimonialFooter flex">
                   <span class="testimonialAuthor flex">
-                    <span class="profilePicContaner flex"></span>
+                    <span class="profilePicContainer flex">
+                      <img
+                        src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80"
+                        alt="adam profile img"
+                      />
+                    </span>
                     <span class="author flexColumn">
                       <h4 class="authorName">Adam Cuppy</h4>
                       <h5 class="authorDescription">Founder, EventsNYC</h5>
                     </span>
                   </span>
-                  <span class="testimonialBtnsContainer">
-                    <button class="leftSlideBtn slideBtn"></button>
-                    <button class="rightSlideBtn slideBtn"></button>
+                  <span class="testimonialBtnsContainer flex">
+                    <button class="leftSlideBtn slideBtn">
+                      <i class="bx bx-left-arrow-alt"></i>
+                    </button>
+                    <div class="hl"></div>
+                    <button class="rightSlideBtn slideBtn">
+                      <i class="bx bx-right-arrow-alt"></i>
+                    </button>
                   </span>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="faqSection pageSection flex">
+        <div class="innerContainerFaq row flexColumn">
+          <h3 class="subtitle specialText">Faqs</h3>
+          <h2 class="sectionTitle">
+            You have <span class="specialText">Questions?</span>
+          </h2>
+          <p class="sectionPara faqPara">
+            And we have got answers to all of them. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit.
+          </p>
+          <div class="faqAccordion flex">
+            <ul class="faqList flexColumn">
+              <li class="faqLi flex">
+                <span class="questionHeading flex">
+                  <span class="question"
+                    >Are all the templates easily customizable ?</span
+                  >
+                  <i class="bx bx-chevron-down"></i>
+                </span>
+              </li>
+              <li class="faqLi flex">
+                <span class="questionHeading flex">
+                  <span class="question"
+                    >How long do you usually support a standalone template for
+                    ?</span
+                  >
+                  <i class="bx bx-chevron-down"></i>
+                </span>
+              </li>
+              <li class="faqLi flex">
+                <span class="questionHeading flex">
+                  <span class="question"
+                    >What kind of payment methods do you accept ?</span
+                  >
+                  <i class="bx bx-chevron-down"></i>
+                </span>
+              </li>
+              <li class="faqLi flex">
+                <span class="questionHeading flex">
+                  <span class="question"
+                    >Is there a subscription service to get the latest templates
+                    ?</span
+                  >
+                  <i class="bx bx-chevron-down"></i>
+                </span>
+              </li>
+              <li class="faqLi flex">
+                <span class="questionHeading flex">
+                  <span class="question"
+                    >Do you really support Internet Explorer 11 ?</span
+                  >
+                  <i class="bx bx-chevron-down"></i>
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
