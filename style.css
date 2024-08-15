@@ -12,7 +12,6 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: var(--black-text);
-  padding: 0rem 2rem;
 }
 
 :root {
@@ -120,6 +119,7 @@ button {
 
 .mainContainer {
   width: 100%;
+  padding: 0rem 2rem;
 }
 
 .pageSection {
@@ -756,4 +756,118 @@ input::placeholder {
   font-weight: 500;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* cta section */
+
+.ctaSection {
+  margin-bottom: 6rem;
+}
+
+.ctaInnerContainer {
+  padding: 6rem 8rem;
+  border-radius: 1rem;
+  background-color: var(--accent-color);
+  background-color: rgb(100, 21, 255);
+  color: #ffff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ctaCopy {
+  max-width: 450px;
+}
+
+.ctaCopy .sectionTitle {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.ctaButtonSection {
+  column-gap: 1rem;
+}
+
+.ctaButtonSection .ctaBtn {
+  padding: 1rem 1.75rem;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  min-width: fit-content;
+}
+
+.ctaButtonSection .getStartedBtn {
+  background-color: rgba(245, 101, 101, 1);
+  color: rgba(247, 250, 252, 1);
+}
+
+.ctaButtonSection .contactUsBtn {
+  border: 1px solid;
+  background-color: transparent;
+  border-color: rgba(160, 174, 192, 1);
+  color: rgba(247, 250, 252, 1);
+}
+
+/* footer */
+
+.mainFooter {
+  width: 100%;
+  background-color: rgb(100, 21, 255);
+  color: #ffff;
+  padding: 6rem 2rem;
+}
+
+.linksContainer {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.linkHeading {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.linkList {
+  list-style-type: none;
+  row-gap: 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.footerInfo {
+  padding: 3rem 0rem 0rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerLogo {
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  font-size: 1.25rem;
+}
+
+.copyrightText {
+  color: var(--light-grey);
+  font-size: 0.9rem;
+}
+
+.socialMediaIcons {
+  column-gap: 1rem;
+}
+
+.socialCircle {
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4dae3;
+  color: var(--accent-color);
+  border-radius: 100%;
+  font-size: 1.25rem;
 }
