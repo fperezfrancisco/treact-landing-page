@@ -19,6 +19,7 @@ body {
   --accent-color: #6415ff;
   --black-text: #1a202c;
   --light-grey: #7c8ba1;
+  --hover-primary-color: rgba(80, 17, 204, 1);
 }
 
 img,
@@ -65,6 +66,28 @@ button {
 }
 
 /* main navigation */
+.mainHeader {
+  transform: translateX(-2000px);
+  animation: slideFromLeft 0.5s ease forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(2000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 
 .mainNav {
   justify-content: space-between;
@@ -81,6 +104,12 @@ button {
   letter-spacing: 0.025em;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.homeLogo:hover,
+.homeLogo:focus {
+  color: var(--accent-color);
 }
 
 .logoImg {
@@ -93,11 +122,73 @@ button {
 }
 
 .navLi {
+  position: relative;
   margin: 0px 1.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.025em;
 }
+
+.navLink,
+.link {
+  transition: all 0.5s ease;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: var(--accent-color);
+}
+
+.link::after {
+  background-color: #ffff;
+}
+
+.navLink::after,
+.link::after {
+  content: "";
+  margin-top: 0.25rem;
+  height: 2px;
+  width: 100%;
+  background: var(--black-text);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.navLink:hover::after {
+  opacity: 1;
+  background: var(--accent-color);
+}
+
+.linkLi {
+  position: relative;
+  width: fit-content;
+}
+
+.link:hover:after {
+  opacity: 1;
+  background: #ffff;
+}
+
+/*
+.navLink::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, white, white);
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.5s ease;
+}
+
+.navLink:hover:before {
+  background-size: 100% 2px;
+}*/
 
 .logInLi {
   margin-left: 48px;
@@ -113,6 +204,11 @@ button {
   border-radius: 1.25rem;
   font-weight: 600;
   margin-left: 0.5rem;
+  transition: all 0.4s ease;
+}
+
+.signUpBtn:hover {
+  background-color: var(--hover-primary-color);
 }
 
 /* main section of page */
@@ -124,6 +220,32 @@ button {
 
 .pageSection {
   padding: 6rem 0rem;
+}
+
+.heroSection {
+  position: relative;
+  transform: translateX(-2000px);
+  animation: slideFromLeft 0.5s ease forwards;
+}
+
+.heroDecoration {
+  pointer-events: none;
+  z-index: -1;
+  position: absolute;
+  left: -350px;
+  bottom: -100px;
+  opacity: 0.05;
+  width: 30%;
+}
+
+.featureDecoration {
+  pointer-events: none;
+  z-index: -1;
+  position: absolute;
+  right: -200px;
+  bottom: -50rem;
+  opacity: 0.5;
+  width: 20%;
 }
 
 .heroCopy {
@@ -170,6 +292,11 @@ button {
   color: var(--light-grey);
   border-radius: 2rem;
   padding: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.emailInput:hover {
+  border-color: var(--light-grey);
 }
 
 input::placeholder {
@@ -193,6 +320,11 @@ input::placeholder {
   padding: 0rem 1.5rem;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease;
+}
+
+.emailBtn:hover {
+  background-color: var(--hover-primary-color);
 }
 
 .customersContainer {
@@ -218,6 +350,12 @@ input::placeholder {
 
 .featuresSection {
   padding: 5rem 0;
+  transform: translateX(2000px);
+  animation: slideFromRight 1s ease forwards;
+}
+
+.featuresSection.animate {
+  animation: slideFromRight 1s ease forwards;
 }
 
 .innerFeaturesContainer {
@@ -320,6 +458,11 @@ input::placeholder {
   border-radius: 2rem;
   width: fit-content;
   letter-spacing: 0.5px;
+  transition: all 0.5s ease;
+}
+
+.learnMoreBtn:hover {
+  background-color: var(--hover-primary-color);
 }
 
 /* easy section */
@@ -514,6 +657,11 @@ input::placeholder {
   border: none;
   box-shadow: none;
   text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.ctaBtn:hover {
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .businessPriceBox {
@@ -543,6 +691,10 @@ input::placeholder {
 .businessBtn {
   background-color: #ffff;
   color: var(--accent-color);
+}
+
+.businessBtn:hover {
+  background-color: #ededed;
 }
 
 .pricingColorStrip {
@@ -744,6 +896,12 @@ input::placeholder {
   color: var(--title-color);
   font-weight: 600;
   letter-spacing: 0.25px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.faqLi:hover {
+  background-color: rgb(228, 228, 228);
 }
 
 .questionHeading {
@@ -810,6 +968,7 @@ input::placeholder {
 /* footer */
 
 .mainFooter {
+  position: relative;
   width: 100%;
   background-color: rgb(100, 21, 255);
   color: #ffff;
@@ -870,4 +1029,15 @@ input::placeholder {
   color: var(--accent-color);
   border-radius: 100%;
   font-size: 1.25rem;
+}
+
+.footerDecoration {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20rem;
+  width: 20rem;
+  opacity: 0.5;
+  z-index: 1;
+  background-color: var(--accent-color);
 }
