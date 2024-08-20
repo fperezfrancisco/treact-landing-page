@@ -245,7 +245,26 @@ button {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
   background-color: #ffff;
   padding: 2rem 1rem;
-  display: none;
+  transform: translateX(1400px);
+}
+
+.mobileNav.view {
+  animation: menu-slide 0.35s ease forwards;
+}
+
+@keyframes menu-slide {
+  0% {
+    transform: translateX(1400px);
+    opacity: 0.5;
+  }
+  60% {
+    transform: translateX(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .mobileNavIcon {
@@ -1482,6 +1501,10 @@ input::placeholder {
   }
 
   .menuIconContainer {
+    display: none;
+  }
+
+  .mobileNav {
     display: none;
   }
 
