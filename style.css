@@ -69,6 +69,7 @@ button {
 .mainHeader {
   transform: translateX(-2000px);
   animation: slideFromLeft 0.5s ease forwards;
+  z-index: 4;
 }
 
 @keyframes slideFromLeft {
@@ -92,7 +93,7 @@ button {
 .mainNav {
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0rem;
+  padding: 2rem;
   width: 100%;
 }
 
@@ -172,6 +173,25 @@ button {
   background: #ffff;
 }
 
+/* mobile navigation on */
+
+.navList {
+  display: none;
+}
+
+.menuIconContainer {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.menuIconContainer:hover,
+.menuIconContainer:focus {
+  color: var(--accent-color);
+}
+
 /*
 .navLink::before {
   content: "";
@@ -204,11 +224,68 @@ button {
   border-radius: 1.25rem;
   font-weight: 600;
   margin-left: 0.5rem;
+  letter-spacing: 0.5px;
   transition: all 0.4s ease;
 }
 
 .signUpBtn:hover {
   background-color: var(--hover-primary-color);
+}
+
+.mobileNav {
+  position: fixed;
+  transform: none;
+  z-index: 9000;
+  left: 16px;
+  right: 16px;
+  top: 24px;
+  margin: auto;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  background-color: #ffff;
+  padding: 2rem 1rem;
+  display: none;
+}
+
+.mobileNavIcon {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  margin: auto;
+  z-index: 10;
+  padding: 0px;
+  font-size: 2rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.mobileNavIcon:hover,
+.mobileNavIcon:focus {
+  color: var(--accent-color);
+}
+
+.mobileNavList {
+  width: 100%;
+  margin-top: 1rem;
+  align-items: center;
+  text-align: center;
+  row-gap: 1.5rem;
+}
+
+.mobileNavList .navLi {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.mobileNavList .logInLi {
+  margin: 0 1.5rem;
+}
+
+.mobileNavList .signUpBtn {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
 }
 
 /* main section of page */
@@ -222,10 +299,28 @@ button {
   padding: 6rem 0rem;
 }
 
+.innerContainerWork,
+.innerEasyContainer,
+.innerValueContainer,
+.innerTestimonialContainer,
+.footerInfo {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.innerValueContainer,
+.innerContainerWork {
+  flex-direction: column-reverse;
+}
+
 .heroSection {
   position: relative;
   transform: translateX(-2000px);
   animation: slideFromLeft 0.5s ease forwards;
+  flex-direction: column;
+  align-items: center;
 }
 
 .heroDecoration {
@@ -249,13 +344,16 @@ button {
 }
 
 .heroCopy {
-  text-align: left;
-  width: 40%;
-  max-width: none;
+  text-align: center;
+  width: 100%;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 .heroTitle {
-  font-size: 3.25rem;
+  font-size: 1.875rem;
   color: var(--black-text);
   font-weight: 700;
   line-height: 1.25;
@@ -266,17 +364,20 @@ button {
 }
 
 .heroArt {
-  width: 60%;
+  width: 100%;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .heroImg {
   width: 100%;
-  max-width: 48rem;
+  max-width: 32rem;
 }
 
 .sectionPara {
-  font-size: 1.125rem;
-  margin: 2rem 0rem;
+  font-size: 0.875rem;
+  margin: 1.25rem 0rem;
   line-height: 1.5;
 }
 
@@ -284,6 +385,8 @@ button {
   width: 100%;
   position: relative;
   max-width: 28rem;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 
 .emailInput {
@@ -305,11 +408,7 @@ input::placeholder {
 }
 
 .emailBtn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-  margin: auto;
+  position: relative;
   border: none;
   box-shadow: none;
   border-radius: 2rem;
@@ -317,7 +416,7 @@ input::placeholder {
   color: #fff;
   font-size: 1.125rem;
   font-weight: 700;
-  padding: 0rem 1.5rem;
+  padding: 1rem 1.5rem;
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
@@ -328,7 +427,7 @@ input::placeholder {
 }
 
 .customersContainer {
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-transform: uppercase;
   color: var(--light-grey);
 }
@@ -341,7 +440,7 @@ input::placeholder {
 }
 
 .customersImg {
-  padding-right: 6rem;
+  padding-right: 0rem;
   margin-top: 1rem;
   opacity: 0.5;
 }
@@ -373,7 +472,7 @@ input::placeholder {
 
 .sectionTitle {
   font-weight: 900;
-  font-size: 2.75rem;
+  font-size: 2.25rem;
 }
 
 .titlePara {
@@ -393,9 +492,11 @@ input::placeholder {
 .serviceBox {
   margin: 0rem 1rem;
   padding: 2rem 0.5rem;
-
   width: 100%;
-  max-width: calc(92% / 3);
+  max-width: 24rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .iconBox {
@@ -413,8 +514,8 @@ input::placeholder {
 
 .serviceDescription {
   margin: 0.5rem 0rem 0rem 1rem;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
 .serviceTitle {
@@ -442,11 +543,12 @@ input::placeholder {
 }
 
 .innerContainerWork > div {
-  width: 50%;
+  width: 100%;
 }
 
 .qualityWorkCopy {
-  padding: 1.5;
+  padding: 1.5rem;
+  align-items: center;
 }
 
 .learnMoreBtn {
@@ -461,6 +563,14 @@ input::placeholder {
   transition: all 0.5s ease;
 }
 
+.qualityArtContainer,
+.innerArtContainerEasy,
+.valueArtContainer {
+  width: 100%;
+  max-width: 28rem;
+  margin: 0rem auto;
+}
+
 .learnMoreBtn:hover {
   background-color: var(--hover-primary-color);
 }
@@ -468,7 +578,7 @@ input::placeholder {
 /* easy section */
 
 .innerEasyContainer > div {
-  width: 50%;
+  width: 100%;
 }
 
 .innerArtContainerEasy {
@@ -480,7 +590,7 @@ input::placeholder {
 }
 
 .easyCopyContainer {
-  margin-left: 4rem;
+  margin-left: 0rem;
   padding: 2rem 0rem;
 }
 
@@ -491,6 +601,11 @@ input::placeholder {
 
 .stepLi {
   column-gap: 1.25rem;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
 }
 
 .number {
@@ -519,12 +634,13 @@ input::placeholder {
 /* values section */
 
 .innerValueContainer > div {
-  width: 50%;
+  width: 100%;
 }
 
 .valueCopyContainer {
-  margin-right: 4rem;
+  margin-right: 0rem;
   padding: 2rem 0rem;
+  align-items: center;
 }
 
 .valueBoxTitle {
@@ -532,8 +648,16 @@ input::placeholder {
 }
 
 .valueBox {
+  flex-direction: column;
   margin: 0rem 0rem 1rem;
   column-gap: 1.5rem;
+  align-items: center;
+}
+
+.valueSmallBox {
+  align-items: center;
+  text-align: center;
+  max-width: 20rem;
 }
 
 .valueIconBox {
@@ -574,18 +698,22 @@ input::placeholder {
 }
 
 .pricingBlock {
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   column-gap: 1rem;
   row-gap: 2rem;
+  justify-content: space-between;
 }
 
 .pricingBox {
   position: relative;
-  width: calc(88% / 3);
+  width: 100%;
+  max-width: 24rem;
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 8px rgb(171, 171, 171);
   margin: 0rem 0.5rem;
+  margin-top: 4rem;
 }
 
 .pricingHeader {
@@ -607,7 +735,7 @@ input::placeholder {
 }
 
 .priceTag {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   margin: 1ren 0rem;
 }
@@ -755,7 +883,13 @@ input::placeholder {
 /* testimonials section */
 
 .innerTestimonialContainer > div {
-  width: 50%;
+  width: 100%;
+}
+
+.testimonialArtContainer {
+  width: 100%;
+  max-width: 28rem;
+  margin: 0rem auto;
 }
 
 .testimonialArtContainer img {
@@ -763,7 +897,9 @@ input::placeholder {
 }
 
 .testimonialCopyContainer {
-  margin-left: 4rem;
+  margin-left: 0rem;
+  margin-top: 4rem;
+  align-items: center;
 }
 
 .testimonialsPara {
@@ -773,6 +909,10 @@ input::placeholder {
 
 .testimonialBox {
   margin: 1rem 0rem;
+}
+
+.testimonial {
+  align-items: center;
 }
 
 .star {
@@ -801,11 +941,15 @@ input::placeholder {
 .testimonialFooter {
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .testimonialAuthor {
   column-gap: 1.5rem;
   align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .profilePicContainer {
@@ -923,13 +1067,16 @@ input::placeholder {
 }
 
 .ctaInnerContainer {
-  padding: 6rem 8rem;
+  flex-direction: column;
+  padding: 5rem 2rem;
   border-radius: 1rem;
   background-color: var(--accent-color);
   background-color: rgb(100, 21, 255);
   color: #ffff;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  row-gap: 1.5rem;
 }
 
 .ctaCopy {
@@ -937,13 +1084,15 @@ input::placeholder {
 }
 
 .ctaCopy .sectionTitle {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
 .ctaButtonSection {
   column-gap: 1rem;
+  row-gap: 1rem;
+  flex-direction: column;
 }
 
 .ctaButtonSection .ctaBtn {
@@ -972,15 +1121,22 @@ input::placeholder {
   width: 100%;
   background-color: rgb(100, 21, 255);
   color: #ffff;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .linksContainer {
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--light-grey);
+}
+
+.linkBox {
+  margin-top: 3rem;
+  padding: 0rem 1rem;
+  text-align: center;
+  align-items: center;
 }
 
 .linkHeading {
@@ -996,12 +1152,14 @@ input::placeholder {
   font-size: 0.75rem;
   font-weight: 300;
   letter-spacing: 0.5px;
+  align-items: center;
 }
 
 .footerInfo {
   padding: 3rem 0rem 0rem;
   align-items: center;
   justify-content: space-between;
+  row-gap: 1.5rem;
 }
 
 .footerLogo {
@@ -1040,4 +1198,488 @@ input::placeholder {
   opacity: 0.5;
   z-index: 1;
   background-color: var(--accent-color);
+}
+
+/* hidden class */
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+  /* styling changes at 640px */
+
+  .sectionPara {
+    font-size: 1rem;
+  }
+
+  .emailContainer {
+    width: 100%;
+    position: relative;
+    max-width: 28rem;
+  }
+
+  .emailInput {
+    width: 100%;
+    border: 2px solid rgb(226, 232, 240);
+    color: var(--light-grey);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    transition: all 0.5s ease;
+  }
+
+  .emailInput:hover {
+    border-color: var(--light-grey);
+  }
+
+  input::placeholder {
+    color: rgb(184, 190, 197);
+    opacity: 1;
+  }
+
+  .emailBtn {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    right: 8px;
+    margin: auto;
+    border: none;
+    box-shadow: none;
+    border-radius: 2rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 0rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  .emailBtn:hover {
+    background-color: var(--hover-primary-color);
+  }
+
+  .sectionTitle {
+    font-size: 3rem;
+  }
+
+  /* services */
+
+  .serviceBox {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .serviceDescription {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* testimonial section */
+  .testimonialFooter {
+    flex-direction: row;
+  }
+
+  .testimonialAuthor {
+    column-gap: 1.5rem;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0rem;
+  }
+
+  /* cta section */
+
+  .ctaCopy .sectionTitle {
+    font-size: 1.875rem;
+  }
+
+  .ctaButtonSection {
+    flex-direction: row;
+  }
+
+  .ctaInnerContainer {
+    padding: 6rem 8rem;
+  }
+
+  /* pricing */
+
+  .priceTag {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1ren 0rem;
+  }
+
+  /* footer */
+
+  .mainFooter {
+    padding: 6rem 2rem;
+  }
+
+  .linksContainer {
+    width: 100%;
+    margin-top: -3rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .linkBox {
+    padding: 0rem;
+    width: 33%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .linkList {
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Features section at 768px */
+
+  .innerContainerWork,
+  .innerEasyContainer,
+  .innerValueContainer,
+  .innerTestimonialContainer,
+  .footerInfo {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .serviceBox {
+    margin: 0rem 1rem;
+    padding: 2rem 0.5rem;
+    width: 50%;
+    max-width: none;
+  }
+
+  /* quality work section */
+
+  .innerContainerWork > div {
+    width: 50%;
+  }
+
+  .qualityWorkCopy {
+    padding: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .qualityArtContainer,
+  .innerArtContainerEasy,
+  .valueArtContainer {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* easy section */
+
+  .innerEasyContainer > div {
+    width: 50%;
+  }
+
+  .innerArtContainerEasy {
+    flex-shrink: 0;
+  }
+
+  .innerArtContainerEasy img {
+    height: fit-content;
+  }
+
+  .easyCopyContainer {
+    margin-left: 4rem;
+    padding: 2rem 0rem;
+  }
+
+  .stepsList {
+    margin-top: 3rem;
+    row-gap: 2rem;
+  }
+
+  .stepLi {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 1.25rem;
+  }
+
+  /* values section */
+
+  .innerValueContainer > div {
+    width: 50%;
+  }
+
+  .valueCopyContainer {
+    margin-right: 4rem;
+    padding: 2rem 0rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .valueBoxTitle {
+    align-items: center;
+  }
+
+  .valueBox {
+    align-items: flex-start;
+  }
+
+  .valueSmallBox {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 20rem;
+  }
+
+  .valueIconBox {
+    padding: 0.5rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  /* testimonial */
+
+  .innerTestimonialContainer > div {
+    width: 50%;
+  }
+
+  .testimonialArtContainer {
+    max-width: none;
+  }
+
+  .testimonialCopyContainer {
+    margin-left: 4rem;
+    margin-top: 4rem;
+    align-items: flex-start;
+  }
+
+  .testimonial {
+    align-items: flex-start;
+  }
+
+  /* footer */
+  .linksContainer {
+    width: 100%;
+    margin-top: -3rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .linkBox {
+    padding: 0rem;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* desktop navigation on */
+
+  .navList {
+    display: flex;
+  }
+
+  .menuIconContainer {
+    display: none;
+  }
+
+  .sectionPara {
+    font-size: 1rem;
+    margin: 2rem 0rem;
+    line-height: 1.5;
+  }
+
+  /* hero section at 1024px width*/
+  .heroSection {
+    flex-direction: row;
+  }
+
+  .heroCopy {
+    text-align: left;
+    width: 40%;
+    max-width: none;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .heroArt {
+    justify-content: flex-end;
+  }
+
+  .customersContainer {
+    margin-top: 5rem;
+    text-transform: uppercase;
+    color: var(--light-grey);
+  }
+
+  .customersPara {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0rem;
+  }
+
+  .customersImg {
+    padding-right: 4rem;
+  }
+
+  .heroArt {
+    margin-top: 0px;
+    width: 60%;
+  }
+
+  /* Features section at 1024px */
+
+  .serviceBox {
+    margin: 0rem 1rem;
+    padding: 2rem 0.5rem;
+    width: calc(92% / 3);
+    width: 33.333%;
+    max-width: 24rem;
+  }
+
+  /* value section at 1024px */
+
+  .valueBox {
+    flex-direction: row;
+    margin: 0rem 0rem 1rem;
+    column-gap: 1.5rem;
+  }
+
+  /* pricing section at 1024 px */
+
+  .pricingBlock {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+  }
+
+  .pricingBox {
+    position: relative;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 8px rgb(171, 171, 171);
+    margin: 0rem;
+    margin-top: 4rem;
+    margin-right: 2rem;
+  }
+
+  .pricingHeader {
+    padding-bottom: 1rem;
+    /* border-bottom: 2px solid var(--light-grey); */
+    text-align: center;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 2rem;
+  }
+
+  .pricingTitle {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: var(--black-text);
+    font-size: 1.25rem;
+    margin: 1rem 0rem;
+  }
+
+  .priceTag {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1ren 0rem;
+  }
+
+  .billingType {
+    color: var(--light-grey);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    margin: 1rem 0rem;
+    text-transform: uppercase;
+  }
+
+  .pricingDescription {
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    row-gap: 2rem;
+    border-bottom: 2px solid var(--light-grey);
+  }
+
+  .descriptionList {
+    text-align: center;
+    align-items: center;
+    row-gap: 1rem;
+    color: var(--light-grey);
+  }
+
+  .descriptionLi {
+    opacity: 0.75;
+  }
+
+  .priceCta {
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ctaBtn {
+    padding: 1rem 3.25rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+  }
+
+  .ctaInnerContainer {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  /* footer */
+
+  .mainFooter {
+    padding: 6rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  /* header at 1280px */
+  .mainNav {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /* hero section at 1280px width*/
+  .heroCopy {
+    text-align: left;
+    width: 40%;
+    max-width: none;
+  }
+
+  .heroTitle {
+    font-size: 3.25rem;
+    color: var(--black-text);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .heroImg {
+    width: 100%;
+    max-width: 48rem;
+    align-self: center;
+    justify-self: center;
+  }
 }

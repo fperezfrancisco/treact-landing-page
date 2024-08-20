@@ -19,7 +19,7 @@
   <body>
     <header class="mainHeader flex row">
       <nav class="mainNav flex">
-        <a href="#" class="navLink homeLogo flex">
+        <a href="#" class="homeLogo flex">
           <img
             src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg"
             alt="treact logo"
@@ -43,15 +43,39 @@
             <button class="signUpBtn flex">Sign Up</button>
           </li>
         </ul>
+        <span class="menuIconContainer flex">
+          <i class="bx bx-menu"></i>
+        </span>
       </nav>
     </header>
+    <div class="mobileNav flexColumn">
+      <div class="mobileNavIcon flex"><i class="bx bx-x"></i></div>
+      <ul class="mobileNavList noList flexColumn">
+        <li class="navLi flex">
+          <a href="#about" class="navLink">About</a>
+        </li>
+        <li class="navLi flex"><a href="#blog" class="navLink">Blog</a></li>
+        <li class="navLi flex">
+          <a href="#pricing" class="navLink">Pricing</a>
+        </li>
+        <li class="navLi flex">
+          <a href="#contact" class="navLink">Contact Us</a>
+        </li>
+        <li class="navLi flex logInLi">
+          <a href="#logIn" class="navLink">Login</a>
+        </li>
+        <li class="navLi flex signUpLi">
+          <button class="signUpBtn flex">Sign Up</button>
+        </li>
+      </ul>
+    </div>
     <main class="mainContainer">
       <svg
         width="600"
         height="600"
         viewBox="0 0 600 600"
         xmlns="http://www.w3.org/2000/svg"
-        class="TwoColumnWithInput__DecoratorBlob1-sc-4exk7k-8 heroDecoration"
+        class="TwoColumnWithInput__DecoratorBlob1-sc-4exk7k-8 heroDecoration hidden"
       >
         <g transform="translate(300,300)">
           <path
@@ -209,7 +233,7 @@
         height="600"
         viewBox="0 0 600 600"
         xmlns="http://www.w3.org/2000/svg"
-        class="ThreeColWithSideImage__DecoratorBlob-sc-i1jy54-8 featureDecoration"
+        class="ThreeColWithSideImage__DecoratorBlob-sc-i1jy54-8 featureDecoration hidden"
       >
         <g transform="translate(300,300)">
           <path
